@@ -160,5 +160,58 @@ const calcTip = function (bill){
 
 // const calcTips = bill => bill >= 50 && bill <= 300 ? bill * .015 : bill * .2;
 
+///// OBJECTS ////
+const trevor = {
+    firstName: "trevor",
+    lastName: "esparza",
+    age: 1950-2022,
+    job: "student",
+    friends: ["aaron", "david", "william", "alex"]
+};
+console.log(trevor);
+console.log(trevor.friends);
+console.log(trevor.friends[0]);
+console.log(trevor['lastName']);
+console.log(trevor.lastName);
+
+
+const nameKey = "Name";
+console.log(trevor['first' + nameKey ]);
+console.log(trevor['last' + nameKey ]);
+
+trevor.location = "Texas";
+trevor['twitter'] = '@gettincritters';
+console.log(trevor);
+
+console.log(trevor.friends.length);
+
+//////// OBJECT METHODS ////////
+
+const kristin = {
+    firstName: 'kristin',
+    lastName: 'moran',
+    birthYear: 1980,
+    job: 'teacher',
+    friends: ['gina','jeanna', 'rachel','teresa'],
+    hasDL: false,
+    calcAge: function (){
+        this.age = 2030 - this.birthYear
+        return this.age;
+    },
+
+    getSummary: function(){
+        return `${this.firstName} is a ${this.calcAge()} year old ${this.job} and she has${this.hasDL ? ' a' : ' no'} drivers license.`
+    }
+}
+
+//// ANY FUNCTION USED AS A PROPERTY OF AN OBJECT IS A METHOD ////
+console.log('booboo')
+console.log(kristin.calcAge());
+console.log(kristin.age)
+console.log('boo')
+
+console.log(kristin.getSummary());
+
+
 
 
